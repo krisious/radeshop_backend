@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index']);
 
+Auth::routes(['register' => false]);
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
