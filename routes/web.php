@@ -1,8 +1,11 @@
 <?php
 
+
+use App\Models\ProductGallery;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductGalleryController;  
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +26,11 @@ Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])->na
 
 Auth::routes(['register' => false]);
 
+Route::get('products/{id}/gallery', [ProductController::class, 'gallery'])->name('products.gallery');
 Route::resource('products', ProductController::class);
 
+Route::resource('product-galleries', ProductGalleryController::class);
+
+// Route::get('transactions/{id}/set-status', [TransactionController::class, 'setStatus'])->name('transactions.status');
+// Route::resource('transactions', TransactionController::class);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
