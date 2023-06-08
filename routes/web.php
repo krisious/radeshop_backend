@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductGalleryController;  
+use App\Http\Controllers\TransactionController;  
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,6 @@ Route::resource('products', ProductController::class);
 
 Route::resource('product-galleries', ProductGalleryController::class);
 
-// Route::get('transactions/{id}/set-status', [TransactionController::class, 'setStatus'])->name('transactions.status');
-// Route::resource('transactions', TransactionController::class);
+Route::get('transactions/{id}/set-status', [TransactionController::class, 'setStatus'])->name('transactions.status');
+Route::resource('transactions', TransactionController::class);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
