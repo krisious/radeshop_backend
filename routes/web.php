@@ -1,12 +1,12 @@
 <?php
 
-
-use App\Models\ProductGallery;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductGalleryController;  
 use App\Http\Controllers\TransactionController;  
+use App\Http\Controllers\LogoutController;  
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +26,8 @@ use App\Http\Controllers\TransactionController;
 Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 Auth::routes(['register' => false]);
+
+Route::post("logout",[LogoutController::class,"store"])->name("logout");
 
 Route::get('products/{id}/gallery', [ProductController::class, 'gallery'])->name('products.gallery');
 Route::resource('products', ProductController::class);

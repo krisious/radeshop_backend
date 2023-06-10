@@ -5,8 +5,15 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-body">
-                    <h4 class="box-title">Daftar Foto Barang</h4>
+                <div class="card-body d-flex justify-content-between">
+                    <div>
+                        <h4 class="box-title">Daftar Foto Barang</h4>
+                      </div>
+                      <div>
+                        <a href="{{ route('product-galleries.create') }}" class="btn btn-success btn-sm">
+                          <i class="fa fa-pencil"></i>&nbsp; Tambah Data
+                        </a>
+                      </div>
                 </div>
                 <div class="card-body--">
                     <div class="table-stats order-table ov-h">
