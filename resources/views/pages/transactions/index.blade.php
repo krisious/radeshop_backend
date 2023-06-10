@@ -23,9 +23,10 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <?php $i = 1; ?>
                     @forelse ($items as $item)
                       <tr>
-                        <td>{{ $item->id }}</td>
+                        <td>{{ $i++ }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->email }}</td>
                         <td>{{ $item->number }}</td>

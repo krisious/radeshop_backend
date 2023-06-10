@@ -9,6 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="images/logo-rade/rade-icon.png" />
     <title>Radeshop Admin</title>
     <meta name="description" content="Radeshop - HTML5 Admin Template" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
