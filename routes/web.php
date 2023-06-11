@@ -25,7 +25,7 @@ use App\Http\Controllers\LogoutController;
 
 Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::post("logout",[LogoutController::class,"store"])->name("logout");
 
