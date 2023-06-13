@@ -26,7 +26,7 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $items = Transaction::all();
+        $items = Transaction::all()->sortByDesc('id');
 
         return view('pages.transactions.index')->with([
             'items' => $items
