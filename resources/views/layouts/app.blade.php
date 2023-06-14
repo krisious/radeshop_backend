@@ -20,6 +20,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                <img class="navbar-brand-img" src="images/logo-rade/rade-icon.png" alt="">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Radeshop') }}
                 </a>
@@ -78,3 +79,9 @@
     </div>
 </body>
 </html>
+
+<style>
+    .navbar-brand-img{
+        width: 40px;
+    }
+</style>
